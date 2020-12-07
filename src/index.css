@@ -1,13 +1,132 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+    margin: 0;
+    padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+body{
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    background:linear-gradient(
+        80deg,
+        #2c1cc4 10%,
+        #17a6df 100%
+        ); 
+
+}
+
+.app{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 450px;
+    min-height: 550px;
+    margin: 45px auto;
+    background: #0d064d;
+    border-radius: 15px;
+
+}
+
+h1{
+    color: #ffffff;
+    padding: 10px 15px;
+}
+
+.todo-input{
+    outline: none;
+    width: 220px;
+    min-height: 30px;
+    border-radius: 10px 0 0 10px;
+    border: 2px solid #45019d;
+    background: transparent;
+    color: #ffffff;
+    font-size: large;
+    padding: 2px 3px 3px 2px;
+    padding-left: 15px;
+    
+}
+
+.todo-input::placeholder{
+    color: aliceblue;
+
+}
+
+.btn{
+    padding-top: 15px;
+    padding: 11px;
+    border: 1px solid transparent;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    outline: none;
+    color: aliceblue;
+    background: linear-gradient(
+    90deg,
+    rgba(93, 12, 255, 1) 0%,
+    rgba(155, 0, 250, 1) 100%)
+}
+
+.todo-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px auto;
+    color: #fff;
+    background-color: #1b58ff;
+  
+    padding: 10px;
+    border-radius: 5px;
+    width: 70%;
+
+}
+
+.todo-row:nth-child(4n + 1) {
+    background: linear-gradient(
+      90deg,
+      rgba(93, 12, 255, 1) 0%,
+      rgb(144, 7, 230) 100%
+    );
+  }
+.todo-row:nth-child(4n + 2) {
+    background: linear-gradient(
+      90deg,
+      rgb(255, 142, 12) 0%,
+      rgb(250, 100, 0) 100%
+    );
+  }
+.todo-row:nth-child(4n + 3) {
+    background: linear-gradient(
+      90deg,
+      rgba(118, 33, 139, 0.568) 0%,
+      rgb(250, 0, 217) 100%
+    );
+  }
+
+  .icons {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .delete-icon {
+    margin-right: 5px;
+    color: #fff;
+  }
+  
+  .edit-icon {
+    color: #fff;
+  }
+
+  .complete{
+      text-decoration: line-through;
+      opacity: 0.5;
+  }
+
+.date{
+    padding-top: 10px;
+    color: #fff;
+    display: flex;
+    justify-content: flex-end;
+    width: 86%;
 }
