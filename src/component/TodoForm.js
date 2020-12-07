@@ -3,7 +3,7 @@ import React,{useState,useEffect,useRef} from 'react'
 export default function New(props) {
 
     const [input,setInput] = useState('')
-
+// setting the input field on focus
     const inputRef = useRef(null);
 
     useEffect(() => {
@@ -20,6 +20,9 @@ export default function New(props) {
         
     }
     return (
+
+// from (input & button) of the app
+// conditional statement for the edit
         <div>
            <form onSubmit={handleSubmit} className ='todo-form'>
                 {

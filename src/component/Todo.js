@@ -3,9 +3,12 @@ import New from './TodoForm'
 import { MdDelete } from "react-icons/md";
 import { FaRegEdit, } from "react-icons/fa";
 
+
+// todo list (adding the delete, complete and edit functionalities)
+
 function Todo({todos,completeTodo, removeTodo, updateTodo}) {
 
-
+// setting the current date and time
     const dateTime= (d) => {
          
         let hour = d.getHours()
@@ -35,11 +38,11 @@ function Todo({todos,completeTodo, removeTodo, updateTodo}) {
     }
 
     return  (
-
+// returning the individual list 
         <div>
 
             <div div className = 'date'>{`${dateTime(new Date())}`}</div> 
-
+            
             {todos.map((todo,index)=>(
        
                 <div className ={todo.iscomplete? 'todo-row complete' : 'todo-row'} key={index}>
